@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/arunkhanna00/freecodecamp-random-quote/issues"
   },
-  "homepage": "https://github.com/arunkhanna00/freecodecamp-random-quote#readme"
+  "homepage": "https://github.com/arunkhanna00/freecodecamp-random-quote#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.1",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.1",
+    "gulp-uglify": "^2.0.0"
+  }
 }
