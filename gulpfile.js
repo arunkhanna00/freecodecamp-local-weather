@@ -25,9 +25,9 @@ gulp.task('minify-css', function() {
 
 // Minify HTML
 gulp.task('minify-html', function() {
-    return gulp.src('app/index.html')
+    return gulp.src('app/index.max.html')
         .pipe(gulpIf('*.html', htmlmin({collapseWhitespace: true})))
-        .pipe(rename('index.min.html'))
+        .pipe(rename('index.html'))
         .pipe(gulp.dest('dist/'))
 });
 
@@ -35,7 +35,7 @@ gulp.task('minify-html', function() {
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: 'app'
+            baseDir: './dist'
         },
     })
 })
@@ -44,5 +44,5 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync', 'minify-js', 'minify-css', 'minify-html'], function() {
     gulp.watch('app/index.js', ['minify-js', browserSync.reload]);
     gulp.watch('app/css/style.css', ['minify-css', browserSync.reload]);
-    gulp.watch('app/index.html', ['minify-html', browserSync.reload]);
+    gulp.watch('app/index.max.html', ['minify-html', browserSync.reload]);
 });
