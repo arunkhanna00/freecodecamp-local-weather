@@ -50,5 +50,5 @@ gulp.task('deploy', function() {
 
 // Reload and minify files whenever a file is saved
 gulp.task('watch', ['browserSync', 'minify-js', 'minify-css', 'minify-html'], function() {
-    gulp.watch('app/**/*.*', ['minify-js', 'sass', 'minify-css', 'minify-html', browserSync.reload]);
+    gulp.watch('app/**/*.*', ['minify-js', 'minify-css', 'minify-html', browserSync.reload]);
 });
