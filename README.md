@@ -1,2 +1,2 @@
-# freecodecamp-random-quote
-Build a random quote generator
+# freecodecamp-local-weather
+Show the local weather
