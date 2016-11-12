@@ -16,9 +16,9 @@ app.controller('myCtrl', ['$http', '$scope', function($http, $scope) {
         $scope.humidity = response.data.main.humidity;
         $scope.temp = Math.round(response.data.main.temp * (9 / 5) - 459.67); // convert from K to F
         $scope.cloudiness = response.data.clouds.all;
-      })
-    })
+      });
+    });
   }
-}])
+}]);
 
 
